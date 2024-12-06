@@ -1,0 +1,77 @@
+/* General styles for body of site */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, #ff6f61, #ffab40);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    background-color: #f1f1f1;
+    color: #666;
+    font-size: 0.9rem;
+    padding: 1rem 0;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+/* Form */
+form {
+    text-align: center;
+}
+
+form .form-control {
+    border: 2px solid #007bff;
+    border-radius: 4px;
+}
+
+form .form-control:focus {
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    border-color: #0056b3;
+}
+
+.input-box {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.input-box p {
+    font-family: 'Roboto', sans-serif; /* Modern, clean font */
+    margin-bottom: 0.5rem; /* Reduced spacing */
+    color: #333; /* Dark gray for readability */
+}
+
+.input-box p.lead {
+    font-weight: bold;
+    color: #ff6f61; 
+    font-size: 1.25rem; /* Slightly larger text */
+}
+
+.input-box p.text-muted {
+    font-size: 1rem;
+    color: #666; /* Light gray */
+}
+
+.input-box .form-control {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+
+.input-box .btn {
+    background-color: #ff6f61;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem 1.5rem;
+}
+
+.input-box .btn:hover {
+    background-color: #ff5733; /* Slightly darker hover effect */
+}
