@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Results - MelodyMeals{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h1 class="mb-4">Your Recipe Matches</h1>
+
+    {% if recipes and recipes|length > 0 %}
+        <div class="row">
+            {% for recipe in recipes %}
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ recipe.title }}</h5>
+                            {% if recipe.image %}
+                                <img src="{{ recipe.image }}" alt="{{ recipe.title }}" class="img-fluid">
+                            {% endif %}
+                            <p class="mt-2">
+                                <a href="https://spoonacular.com/recipes/{{ recipe.id }}" target="_blank" class="btn btn-secondary">View Recipe</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>No recipes found for your mood. Try another color!</p>
+    {% endif %}
+
+    <a href="/" class="btn btn-primary mt-4">Search Again</a>
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Home - MelodyMeals{% endblock %}
+
+{% block content %}
+<div class="input-box shadow-lg p-4 rounded">
+    <p class="lead mb-1">Discover recipes that match the vibe of your favorite songs!</p>
+
+    <form action="/" method="POST" class="mt-4">
+        <div class="mb-3">
+            <label for="color" class="text-muted">Enter a color that represents your mood:</label>
+            <input type="text" id="color" name="color" class="form-control" placeholder="e.g., red, blue, green" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Find Recipes</button>
+    </form>
+
+    {% if error %}
+    <div class="alert alert-danger mt-3">{{ error }}</div>
+    {% endif %}
+</div>
+
+{% endblock %}
